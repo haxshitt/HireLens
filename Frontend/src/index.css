@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    @apply w-full h-full bg-page text-primary font-sans;
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  #root {
+    @apply min-h-full;
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+@layer utilities {
+  .panel-divider {
+    background: linear-gradient(180deg, transparent 0%, #1e2a3a 15%, #1e2a3a 85%, transparent 100%);
+  }
+
+  @media (max-width: 768px) {
+    .panel-divider-mobile {
+      background: linear-gradient(90deg, transparent 0%, #1e2a3a 15%, #1e2a3a 85%, transparent 100%);
+    }
+  }
+}
